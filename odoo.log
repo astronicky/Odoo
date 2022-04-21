@@ -1,0 +1,967 @@
+2022-04-21 06:39:46,202 1560 INFO ? odoo: Odoo version 15.0-20220420 
+2022-04-21 06:39:46,203 1560 INFO ? odoo: Using configuration file at E:\work\odoo\server\odoo.conf 
+2022-04-21 06:39:46,203 1560 INFO ? odoo: addons paths: ['E:\\work\\odoo\\server\\odoo\\addons', 'c:\\users\\power\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'e:\\work\\odoo\\server\\odoo\\addons'] 
+2022-04-21 06:39:46,203 1560 INFO ? odoo: database: openpg@localhost:5432 
+2022-04-21 06:39:49,348 1560 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at E:\work\odoo\thirdparty\wkhtmltopdf.exe 
+2022-04-21 06:39:51,717 1560 INFO ? odoo.service.server: Initiating shutdown 
+2022-04-21 06:39:51,717 1560 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2022-04-21 06:39:58,807 9480 INFO ? odoo: Odoo version 15.0-20220420 
+2022-04-21 06:39:58,808 9480 INFO ? odoo: Using configuration file at E:\work\odoo\server\odoo.conf 
+2022-04-21 06:39:58,808 9480 INFO ? odoo: addons paths: ['E:\\work\\odoo\\server\\odoo\\addons', 'c:\\users\\power\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'e:\\work\\odoo\\server\\odoo\\addons'] 
+2022-04-21 06:39:58,808 9480 INFO ? odoo: database: openpg@localhost:5432 
+2022-04-21 06:39:58,979 9480 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at E:\work\odoo\thirdparty\wkhtmltopdf.exe 
+2022-04-21 06:39:59,669 9480 INFO ? odoo.service.server: HTTP service (werkzeug) running on DESKTOP-EL0MDCD:8069 
+2022-04-21 06:40:00,581 9480 INFO ? odoo.sql_db: Connection to the database failed 
+2022-04-21 06:40:00,921 9480 INFO ? odoo.sql_db: Connection to the database failed 
+2022-04-21 06:40:52,801 9480 INFO ? odoo.http: HTTP Configuring static files 
+2022-04-21 06:40:53,051 9480 INFO ? odoo.sql_db: Connection to the database failed 
+2022-04-21 06:40:53,053 9480 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:40:53] "GET / HTTP/1.1" 500 - 0 0.000 0.245
+2022-04-21 06:40:53,056 9480 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 306, in run_wsgi
+    execute(self.server.app)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 294, in execute
+    application_iter = app(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\server.py", line 482, in app
+    return self.app(e, s)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 112, in application
+    return application_unproxied(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 87, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1314, in __call__
+    return self.dispatch(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1280, in __call__
+    return self.app(environ, start_wrapped)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\middleware\shared_data.py", line 220, in __call__
+    return self.app(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1465, in dispatch
+    self.setup_db(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1371, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1586, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1553, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "E:\work\odoo\server\odoo\service\db.py", line 389, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "E:\work\odoo\server\odoo\sql_db.py", line 706, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 256, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 589, in _locked
+    return fun(self, *args, **kwargs)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 657, in borrow
+    **connection_info)
+  File "E:\work\odoo\python\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  password authentication failed for user "openpg" - - -
+2022-04-21 06:40:53,638 9480 INFO ? odoo.sql_db: Connection to the database failed 
+2022-04-21 06:40:53,639 9480 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:40:53] "GET /favicon.ico HTTP/1.1" 500 - 0 0.000 0.035
+2022-04-21 06:40:53,643 9480 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 306, in run_wsgi
+    execute(self.server.app)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 294, in execute
+    application_iter = app(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\server.py", line 482, in app
+    return self.app(e, s)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 112, in application
+    return application_unproxied(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 87, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1314, in __call__
+    return self.dispatch(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1280, in __call__
+    return self.app(environ, start_wrapped)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\middleware\shared_data.py", line 220, in __call__
+    return self.app(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1465, in dispatch
+    self.setup_db(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1371, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1586, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1553, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "E:\work\odoo\server\odoo\service\db.py", line 389, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "E:\work\odoo\server\odoo\sql_db.py", line 706, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 256, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 589, in _locked
+    return fun(self, *args, **kwargs)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 657, in borrow
+    **connection_info)
+  File "E:\work\odoo\python\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  password authentication failed for user "openpg" - - -
+2022-04-21 06:40:58,207 9480 INFO ? odoo.sql_db: Connection to the database failed 
+2022-04-21 06:40:58,209 9480 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:40:58] "GET / HTTP/1.1" 500 - 0 0.000 0.040
+2022-04-21 06:40:58,214 9480 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 306, in run_wsgi
+    execute(self.server.app)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 294, in execute
+    application_iter = app(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\server.py", line 482, in app
+    return self.app(e, s)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 112, in application
+    return application_unproxied(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 87, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1314, in __call__
+    return self.dispatch(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1280, in __call__
+    return self.app(environ, start_wrapped)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\middleware\shared_data.py", line 220, in __call__
+    return self.app(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1465, in dispatch
+    self.setup_db(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1371, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1586, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1553, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "E:\work\odoo\server\odoo\service\db.py", line 389, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "E:\work\odoo\server\odoo\sql_db.py", line 706, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 256, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 589, in _locked
+    return fun(self, *args, **kwargs)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 657, in borrow
+    **connection_info)
+  File "E:\work\odoo\python\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  password authentication failed for user "openpg" - - -
+2022-04-21 06:40:58,503 9480 INFO ? odoo.sql_db: Connection to the database failed 
+2022-04-21 06:40:58,504 9480 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:40:58] "GET /favicon.ico HTTP/1.1" 500 - 0 0.000 0.035
+2022-04-21 06:40:58,508 9480 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 306, in run_wsgi
+    execute(self.server.app)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 294, in execute
+    application_iter = app(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\server.py", line 482, in app
+    return self.app(e, s)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 112, in application
+    return application_unproxied(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 87, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1314, in __call__
+    return self.dispatch(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1280, in __call__
+    return self.app(environ, start_wrapped)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\middleware\shared_data.py", line 220, in __call__
+    return self.app(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1465, in dispatch
+    self.setup_db(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1371, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1586, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1553, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "E:\work\odoo\server\odoo\service\db.py", line 389, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "E:\work\odoo\server\odoo\sql_db.py", line 706, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 256, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 589, in _locked
+    return fun(self, *args, **kwargs)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 657, in borrow
+    **connection_info)
+  File "E:\work\odoo\python\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  password authentication failed for user "openpg" - - -
+2022-04-21 06:44:08,193 9480 INFO ? odoo.sql_db: Connection to the database failed 
+2022-04-21 06:44:08,194 9480 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:08] "GET / HTTP/1.1" 500 - 0 0.000 0.095
+2022-04-21 06:44:08,200 9480 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 306, in run_wsgi
+    execute(self.server.app)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 294, in execute
+    application_iter = app(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\server.py", line 482, in app
+    return self.app(e, s)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 112, in application
+    return application_unproxied(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 87, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1314, in __call__
+    return self.dispatch(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1280, in __call__
+    return self.app(environ, start_wrapped)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\middleware\shared_data.py", line 220, in __call__
+    return self.app(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1465, in dispatch
+    self.setup_db(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1371, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1586, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1553, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "E:\work\odoo\server\odoo\service\db.py", line 389, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "E:\work\odoo\server\odoo\sql_db.py", line 706, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 256, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 589, in _locked
+    return fun(self, *args, **kwargs)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 657, in borrow
+    **connection_info)
+  File "E:\work\odoo\python\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  password authentication failed for user "openpg" - - -
+2022-04-21 06:44:08,458 9480 INFO ? odoo.sql_db: Connection to the database failed 
+2022-04-21 06:44:08,459 9480 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:08] "GET /favicon.ico HTTP/1.1" 500 - 0 0.000 0.054
+2022-04-21 06:44:08,463 9480 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 306, in run_wsgi
+    execute(self.server.app)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 294, in execute
+    application_iter = app(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\server.py", line 482, in app
+    return self.app(e, s)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 112, in application
+    return application_unproxied(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 87, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1314, in __call__
+    return self.dispatch(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1280, in __call__
+    return self.app(environ, start_wrapped)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\middleware\shared_data.py", line 220, in __call__
+    return self.app(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1465, in dispatch
+    self.setup_db(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1371, in setup_db
+    httprequest.session.db = db_monodb(httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1586, in db_monodb
+    dbs = db_list(True, httprequest)
+  File "E:\work\odoo\server\odoo\http.py", line 1553, in db_list
+    dbs = odoo.service.db.list_dbs(force)
+  File "E:\work\odoo\server\odoo\service\db.py", line 389, in list_dbs
+    with closing(db.cursor()) as cr:
+  File "E:\work\odoo\server\odoo\sql_db.py", line 706, in cursor
+    return Cursor(self.__pool, self.dbname, self.dsn, serialized=serialized)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 256, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 589, in _locked
+    return fun(self, *args, **kwargs)
+  File "E:\work\odoo\server\odoo\sql_db.py", line 657, in borrow
+    **connection_info)
+  File "E:\work\odoo\python\lib\site-packages\psycopg2\__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: FATAL:  password authentication failed for user "openpg" - - -
+2022-04-21 06:44:43,135 9480 INFO ? odoo.service.server: Initiating shutdown 
+2022-04-21 06:44:43,136 9480 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2022-04-21 06:44:47,346 9060 INFO ? odoo: Odoo version 15.0-20220420 
+2022-04-21 06:44:47,347 9060 INFO ? odoo: Using configuration file at E:\work\odoo\server\odoo.conf 
+2022-04-21 06:44:47,347 9060 INFO ? odoo: addons paths: ['E:\\work\\odoo\\server\\odoo\\addons', 'c:\\users\\power\\appdata\\local\\openerp s.a\\odoo\\addons\\15.0', 'e:\\work\\odoo\\server\\odoo\\addons'] 
+2022-04-21 06:44:47,347 9060 INFO ? odoo: database: dbuser@localhost:5432 
+2022-04-21 06:44:47,491 9060 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at E:\work\odoo\thirdparty\wkhtmltopdf.exe 
+2022-04-21 06:44:47,660 9060 INFO ? odoo.service.server: HTTP service (werkzeug) running on DESKTOP-EL0MDCD:8069 
+2022-04-21 06:44:52,156 9060 INFO ? odoo.http: HTTP Configuring static files 
+2022-04-21 06:44:52,236 9060 INFO ? odoo.http: Generating nondb routing 
+2022-04-21 06:44:52,691 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:52] "GET / HTTP/1.1" 303 - 1 0.010 0.517
+2022-04-21 06:44:52,981 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:52] "GET /web HTTP/1.1" 303 - 2 0.008 0.268
+2022-04-21 06:44:53,984 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:53] "GET /web/database/selector HTTP/1.1" 200 - 2 0.008 0.981
+2022-04-21 06:44:54,342 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/fontawesome/css/font-awesome.css HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,344 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/css/bootstrap.css HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,350 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/jquery/jquery.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,351 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/js/index.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,352 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/popper/popper.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,353 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/js/util.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,653 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/js/alert.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,727 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/js/button.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,728 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/js/carousel.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,805 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/js/collapse.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,806 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/js/dropdown.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,827 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/js/modal.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:54,963 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:54] "GET /web/static/lib/bootstrap/js/tooltip.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:55,041 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:55] "GET /web/static/lib/bootstrap/js/scrollspy.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:55,042 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:55] "GET /web/static/lib/bootstrap/js/popover.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:55,115 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:55] "GET /web/static/lib/bootstrap/js/tab.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:55,442 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:55] "GET /web/static/src/public/database_manager.js HTTP/1.1" 200 - - - -
+2022-04-21 06:44:56,142 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:56] "GET /web/static/img/logo2.png HTTP/1.1" 200 - - - -
+2022-04-21 06:44:57,592 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:57] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - - - -
+2022-04-21 06:44:57,749 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:57] "GET /web/static/img/logo2.png HTTP/1.1" 200 - - - -
+2022-04-21 06:44:57,752 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:44:57] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - - - -
+2022-04-21 06:45:49,741 9060 INFO None odoo.service.db: Create database `mydb`. 
+2022-04-21 06:46:03,761 9060 INFO mydb odoo.modules.loading: loading 1 modules... 
+2022-04-21 06:46:03,761 9060 INFO mydb odoo.modules.loading: Loading module base (1/1) 
+2022-04-21 06:46:03,792 9060 INFO mydb odoo.modules.registry: module base: creating or updating database tables 
+2022-04-21 06:46:16,036 9060 INFO mydb odoo.models: Storing computed values of ir.module.module.menus_by_module 
+2022-04-21 06:46:16,036 9060 INFO mydb odoo.models: Storing computed values of ir.module.module.reports_by_module 
+2022-04-21 06:46:16,036 9060 INFO mydb odoo.models: Storing computed values of ir.module.module.views_by_module 
+2022-04-21 06:46:16,042 9060 INFO mydb odoo.models: Storing computed values of res.partner.display_name 
+2022-04-21 06:46:16,042 9060 INFO mydb odoo.models: Storing computed values of res.partner.partner_share 
+2022-04-21 06:46:16,042 9060 INFO mydb odoo.models: Storing computed values of res.partner.commercial_partner_id 
+2022-04-21 06:46:16,042 9060 INFO mydb odoo.models: Storing computed values of res.partner.commercial_company_name 
+2022-04-21 06:46:16,043 9060 INFO mydb odoo.models: Storing computed values of res.currency.decimal_places 
+2022-04-21 06:46:16,047 9060 INFO mydb odoo.models: Storing computed values of res.company.logo_web 
+2022-04-21 06:46:16,048 9060 INFO mydb odoo.models: Storing computed values of res.company.company_registry 
+2022-04-21 06:46:16,052 9060 INFO mydb odoo.models: Storing computed values of res.users.share 
+2022-04-21 06:46:24,669 9060 INFO mydb odoo.modules.loading: loading base/data/res_bank.xml 
+2022-04-21 06:46:25,091 9060 INFO mydb odoo.modules.loading: loading base/data/res.lang.csv 
+2022-04-21 06:46:25,245 9060 INFO mydb odoo.modules.loading: loading base/data/res_lang_data.xml 
+2022-04-21 06:46:25,966 9060 INFO mydb odoo.modules.loading: loading base/data/res_partner_data.xml 
+2022-04-21 06:46:26,250 9060 INFO mydb odoo.modules.loading: loading base/data/res_company_data.xml 
+2022-04-21 06:46:26,382 9060 INFO mydb odoo.modules.loading: loading base/data/res_users_data.xml 
+2022-04-21 06:46:26,552 9060 INFO mydb odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2022-04-21 06:46:26,697 9060 INFO mydb odoo.modules.loading: loading base/data/res_currency_data.xml 
+2022-04-21 06:46:27,470 9060 INFO mydb odoo.modules.loading: loading base/data/res_country_data.xml 
+2022-04-21 06:46:27,855 9060 INFO mydb odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2022-04-21 06:46:28,010 9060 INFO mydb odoo.modules.loading: loading base/data/ir_config_parameter_data.xml 
+2022-04-21 06:46:28,095 9060 INFO mydb odoo.modules.loading: loading base/security/base_groups.xml 
+2022-04-21 06:46:28,371 9060 INFO mydb odoo.modules.loading: loading base/security/base_security.xml 
+2022-04-21 06:46:29,716 9060 INFO mydb odoo.modules.loading: loading base/views/base_menus.xml 
+2022-04-21 06:46:30,677 9060 INFO mydb odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2022-04-21 06:46:30,842 9060 INFO mydb odoo.modules.loading: loading base/views/res_config_views.xml 
+2022-04-21 06:46:30,907 9060 INFO mydb odoo.modules.loading: loading base/data/res.country.state.csv 
+2022-04-21 06:46:31,878 9060 INFO mydb odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2022-04-21 06:46:32,063 9060 INFO mydb odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2022-04-21 06:46:32,129 9060 INFO mydb odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2022-04-21 06:46:32,152 9060 INFO mydb odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2022-04-21 06:46:32,451 9060 INFO mydb odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2022-04-21 06:46:32,509 9060 INFO mydb odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2022-04-21 06:46:32,536 9060 INFO mydb odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2022-04-21 06:46:32,604 9060 INFO mydb odoo.modules.loading: loading base/views/ir_model_views.xml 
+2022-04-21 06:46:32,782 9060 INFO mydb odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2022-04-21 06:46:32,811 9060 INFO mydb odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2022-04-21 06:46:32,842 9060 INFO mydb odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2022-04-21 06:46:32,868 9060 INFO mydb odoo.modules.loading: loading base/views/ir_translation_views.xml 
+2022-04-21 06:46:33,058 9060 INFO mydb odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2022-04-21 06:46:33,083 9060 INFO mydb odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2022-04-21 06:46:33,135 9060 INFO mydb odoo.modules.loading: loading base/views/ir_default_views.xml 
+2022-04-21 06:46:33,159 9060 INFO mydb odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2022-04-21 06:46:33,166 9060 INFO mydb odoo.modules.loading: loading base/report/ir_model_report.xml 
+2022-04-21 06:46:33,171 9060 INFO mydb odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2022-04-21 06:46:33,418 9060 INFO mydb odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2022-04-21 06:46:33,516 9060 INFO mydb odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2022-04-21 06:46:33,530 9060 INFO mydb odoo.modules.loading: loading base/views/ir_module_views.xml 
+2022-04-21 06:46:33,611 9060 INFO mydb odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2022-04-21 06:46:33,721 9060 INFO mydb odoo.modules.loading: loading base/data/ir_module_module.xml 
+2022-04-21 06:46:33,810 9060 INFO mydb odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2022-04-21 06:46:33,814 9060 INFO mydb odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2022-04-21 06:46:33,849 9060 INFO mydb odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2022-04-21 06:46:33,929 9060 INFO mydb odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2022-04-21 06:46:34,033 9060 INFO mydb odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2022-04-21 06:46:34,158 9060 INFO mydb odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2022-04-21 06:46:34,304 9060 INFO mydb odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2022-04-21 06:46:34,378 9060 INFO mydb odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2022-04-21 06:46:34,465 9060 INFO mydb odoo.modules.loading: loading base/wizard/base_update_translations_views.xml 
+2022-04-21 06:46:34,595 9060 INFO mydb odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2022-04-21 06:46:34,772 9060 INFO mydb odoo.modules.loading: loading base/data/ir_actions_data.xml 
+2022-04-21 06:46:34,777 9060 INFO mydb odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2022-04-21 06:46:34,848 9060 INFO mydb odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2022-04-21 06:46:34,878 9060 INFO mydb odoo.modules.loading: loading base/views/res_company_views.xml 
+2022-04-21 06:46:35,036 9060 INFO mydb odoo.modules.loading: loading base/views/res_lang_views.xml 
+2022-04-21 06:46:35,095 9060 INFO mydb odoo.modules.loading: loading base/views/res_partner_views.xml 
+2022-04-21 06:46:35,340 9060 INFO mydb odoo.modules.loading: loading base/views/res_bank_views.xml 
+2022-04-21 06:46:35,450 9060 INFO mydb odoo.modules.loading: loading base/views/res_country_views.xml 
+2022-04-21 06:46:35,571 9060 INFO mydb odoo.modules.loading: loading base/views/res_currency_views.xml 
+2022-04-21 06:46:35,664 9060 INFO mydb odoo.modules.loading: loading base/views/res_users_views.xml 
+2022-04-21 06:46:35,766 9060 INFO mydb odoo.modules.loading: loading base/views/ir_property_views.xml 
+2022-04-21 06:46:35,788 9060 INFO mydb odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2022-04-21 06:46:35,800 9060 INFO mydb odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2022-04-21 06:46:35,930 9060 INFO mydb odoo.modules.loading: loading base/views/onboarding_views.xml 
+2022-04-21 06:46:35,998 9060 INFO mydb odoo.modules.loading: loading base/security/ir.model.access.csv 
+2022-04-21 06:46:36,337 9060 INFO mydb odoo.modules.loading: Module base loaded in 32.58s, 9524 queries 
+2022-04-21 06:46:36,337 9060 INFO mydb odoo.modules.loading: 1 modules loaded in 32.58s, 9524 queries (+0 extra) 
+2022-04-21 06:46:36,864 9060 INFO mydb odoo.modules.loading: updating modules list 
+2022-04-21 06:46:36,864 9060 INFO mydb odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2022-04-21 06:46:37,643 9060 INFO mydb odoo.modules.loading: loading 7 modules... 
+2022-04-21 06:46:37,643 9060 INFO mydb odoo.modules.loading: Loading module web (2/7) 
+2022-04-21 06:46:37,685 9060 INFO mydb odoo.modules.registry: module web: creating or updating database tables 
+2022-04-21 06:46:38,703 9060 INFO mydb odoo.modules.loading: loading web/security/ir.model.access.csv 
+2022-04-21 06:46:38,715 9060 INFO mydb odoo.modules.loading: loading web/views/webclient_templates.xml 
+2022-04-21 06:46:38,856 9060 INFO mydb odoo.modules.loading: loading web/views/report_templates.xml 
+2022-04-21 06:46:38,936 9060 INFO mydb odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2022-04-21 06:46:38,950 9060 INFO mydb odoo.modules.loading: loading web/views/speedscope_template.xml 
+2022-04-21 06:46:38,956 9060 INFO mydb odoo.modules.loading: loading web/views/lazy_assets.xml 
+2022-04-21 06:46:38,962 9060 INFO mydb odoo.modules.loading: loading web/data/report_layout.xml 
+2022-04-21 06:46:39,143 9060 INFO mydb odoo.modules.loading: Module web loaded in 1.50s, 886 queries 
+2022-04-21 06:46:39,143 9060 INFO mydb odoo.modules.loading: Loading module auth_totp (3/7) 
+2022-04-21 06:46:39,805 9060 INFO mydb odoo.modules.registry: module auth_totp: creating or updating database tables 
+2022-04-21 06:46:40,660 9060 INFO mydb odoo.modules.loading: loading auth_totp/security/security.xml 
+2022-04-21 06:46:40,732 9060 INFO mydb odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2022-04-21 06:46:40,745 9060 INFO mydb odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2022-04-21 06:46:40,752 9060 INFO mydb odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2022-04-21 06:46:40,813 9060 INFO mydb odoo.modules.loading: loading auth_totp/views/templates.xml 
+2022-04-21 06:46:40,824 9060 INFO mydb odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2022-04-21 06:46:40,850 9060 INFO mydb odoo.modules.loading: Module auth_totp loaded in 1.71s, 192 queries 
+2022-04-21 06:46:40,850 9060 INFO mydb odoo.modules.loading: Loading module base_import (4/7) 
+2022-04-21 06:46:41,110 9060 INFO mydb odoo.modules.registry: module base_import: creating or updating database tables 
+2022-04-21 06:46:47,036 9060 INFO mydb odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2022-04-21 06:46:47,264 9060 INFO mydb odoo.modules.loading: Module base_import loaded in 6.41s, 919 queries 
+2022-04-21 06:46:47,264 9060 INFO mydb odoo.modules.loading: Loading module web_editor (5/7) 
+2022-04-21 06:46:49,843 9060 INFO mydb odoo.modules.registry: module web_editor: creating or updating database tables 
+2022-04-21 06:46:50,573 9060 INFO mydb odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2022-04-21 06:46:50,585 9060 INFO mydb odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2022-04-21 06:46:50,590 9060 INFO mydb odoo.modules.loading: loading web_editor/views/editor.xml 
+2022-04-21 06:46:50,614 9060 INFO mydb odoo.modules.loading: loading web_editor/views/snippets.xml 
+2022-04-21 06:46:50,682 9060 INFO mydb odoo.modules.loading: Module web_editor loaded in 3.42s, 245 queries 
+2022-04-21 06:46:50,682 9060 INFO mydb odoo.modules.loading: Loading module web_kanban_gauge (6/7) 
+2022-04-21 06:46:50,751 9060 INFO mydb odoo.modules.loading: Module web_kanban_gauge loaded in 0.07s, 18 queries 
+2022-04-21 06:46:50,751 9060 INFO mydb odoo.modules.loading: Loading module web_tour (7/7) 
+2022-04-21 06:46:50,840 9060 INFO mydb odoo.modules.registry: module web_tour: creating or updating database tables 
+2022-04-21 06:46:51,328 9060 INFO mydb odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2022-04-21 06:46:51,342 9060 INFO mydb odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2022-04-21 06:46:51,353 9060 INFO mydb odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2022-04-21 06:46:51,389 9060 INFO mydb odoo.modules.loading: Module web_tour loaded in 0.64s, 116 queries 
+2022-04-21 06:46:51,389 9060 INFO mydb odoo.modules.loading: 7 modules loaded in 13.75s, 2376 queries (+0 extra) 
+2022-04-21 06:46:52,021 9060 INFO mydb odoo.modules.loading: Modules loaded. 
+2022-04-21 06:46:52,023 9060 INFO mydb odoo.modules.registry: Registry loaded in 48.440s 
+2022-04-21 06:46:52,411 9060 INFO mydb odoo.addons.base.models.res_users: Login successful for db:mydb login:astronickypower@gmail.com from 127.0.0.1 
+2022-04-21 06:46:52,713 9060 INFO mydb odoo.modules.registry: Registry changed, signaling through the database 
+2022-04-21 06:46:53,057 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:46:53] "POST /web/database/create HTTP/1.1" 303 - 16292 45.701 17.799
+2022-04-21 06:46:53,370 9060 INFO mydb odoo.addons.base.models.ir_http: Generating routing map for key None 
+2022-04-21 06:47:04,933 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:04] "GET /web HTTP/1.1" 200 - 178 0.219 11.351
+2022-04-21 06:47:04,978 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:04] "GET /web/assets/13-b1556c8/web.assets_common.min.css HTTP/1.1" 200 - 2 0.001 0.011
+2022-04-21 06:47:05,512 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:05] "GET /web/webclient/load_menus/1f5717edb4e7bec8acddc90b224f148fb9c759c1c5c867ed74b93ffc796e8f1b HTTP/1.1" 200 - 1 0.000 0.143
+2022-04-21 06:47:05,514 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:05] "GET /web/assets/14-53308d9/web.assets_backend.min.css HTTP/1.1" 200 - 2 0.007 0.231
+2022-04-21 06:47:05,515 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:05] "GET /web/assets/17-9bad369/web.assets_backend_prod_only.min.js HTTP/1.1" 200 - 2 0.004 0.229
+2022-04-21 06:47:05,561 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:05] "GET /web/webclient/qweb/a399cf25ee10f8c134ae4e838a7f7f901abae6993143144e76332a6a7ea5ba76?bundle=web.assets_qweb HTTP/1.1" 200 - 2 0.004 0.160
+2022-04-21 06:47:05,572 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:05] "GET /web/assets/15-b1556c8/web.assets_common.min.js HTTP/1.1" 200 - 2 0.001 0.296
+2022-04-21 06:47:05,723 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:05] "GET /web/assets/16-53308d9/web.assets_backend.min.js HTTP/1.1" 200 - 2 0.006 0.438
+2022-04-21 06:47:05,845 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:05] "GET /web/webclient/translations/5227498d9df4b403b0244c75aac21e0c091e50ce?lang=en_US HTTP/1.1" 200 - 5 0.021 0.003
+2022-04-21 06:47:06,749 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:06] "GET /web/webclient/locale/en_US HTTP/1.1" 200 - 1 0.002 0.004
+2022-04-21 06:47:07,072 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:07] "POST /web/action/load HTTP/1.1" 200 - 28 0.058 0.017
+2022-04-21 06:47:07,189 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:07] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 200 - 17 0.021 0.066
+2022-04-21 06:47:07,282 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:07] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 58 0.127 0.030
+2022-04-21 06:47:07,831 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:07] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 42 0.045 0.014
+2022-04-21 06:47:08,130 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /web/image/res.company/1/favicon HTTP/1.1" 200 - 11 0.027 0.008
+2022-04-21 06:47:08,152 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.005 0.006
+2022-04-21 06:47:08,542 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /sale_management/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:08,563 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /website/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:08,565 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /stock/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:08,573 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /account/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:08,582 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /crm/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:08,668 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /base/static/img/icons/mrp_workorder.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:08,948 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /website_sale/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:08,967 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /maintenance/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:08,967 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /base/static/img/icons/account_accountant.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:08,974 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:08] "GET /hr_holidays/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:09,115 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:09] "GET /base/static/img/icons/sale_subscription.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:09,315 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:09] "GET /mass_mailing_sms/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:09,394 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:09] "GET /purchase/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:09,395 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:09] "GET /website_blog/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:09,395 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:09] "GET /website_event/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:09,517 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:09] "GET /base/static/img/icons/web_studio.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:09,905 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:09] "GET /base/static/img/icons/stock_barcode.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:09,954 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:09] "GET /mass_mailing/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:09,991 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:09] "GET /mail/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:10,025 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:10] "GET /hr/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:10,049 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:10] "GET /base/static/img/icons/industry_fsm.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:10,049 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:10] "GET /base/static/img/icons/helpdesk.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:10,258 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:10] "GET /project/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:10,334 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:10] "GET /hr_recruitment/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:10,577 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:10] "GET /calendar/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:10,597 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:10] "GET /hr_expense/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:10,693 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:10] "GET /mrp/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:10,703 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:10] "GET /point_of_sale/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:11,281 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:11] "GET /repair/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:11,336 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:11] "GET /hr_attendance/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:11,340 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:11] "GET /base/static/img/icons/mrp_plm.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:11,341 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:11] "GET /base/static/img/icons/planning.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:11,342 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:11] "GET /im_livechat/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:11,350 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:11] "GET /base/static/img/icons/appointment.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:12,445 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:12] "GET /base/static/img/icons/hr_appraisal.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:12,446 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:12] "GET /base/static/img/icons/quality_control.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:12,461 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:12] "GET /contacts/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:12,468 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:12] "GET /fleet/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:12,596 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:12] "GET /base/static/img/icons/timesheet_grid.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:12,596 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:12] "GET /base/static/img/icons/web_mobile.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:12,990 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:12] "GET /survey/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:12,990 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:12] "GET /website_slides/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:12,993 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:12] "GET /base/static/img/icons/marketing_automation.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:13,102 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:13] "GET /base/static/img/icons/sign.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:13,229 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:13] "GET /board/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:13,760 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:13] "GET /website_forum/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:13,886 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:13] "GET /note/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,045 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /hr_skills/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,190 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /website_hr_recruitment/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,221 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /lunch/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,266 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /base/static/img/icons/voip.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,286 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /payment_adyen/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,303 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /payment_alipay/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,400 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /hr_contract/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,580 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /payment_mollie/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,648 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /base/static/img/icons/sale_ebay.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,653 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /payment_paypal/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,869 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /payment_authorize/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,873 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /payment_buckaroo/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:14,964 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:14] "GET /payment_ogone/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:15,879 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:15] "GET /payment_sips/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:15,883 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:15] "GET /payment_payulatam/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:15,885 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:15] "GET /payment_payumoney/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:15,887 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:47:15] "GET /payment_stripe/static/description/icon.png HTTP/1.1" 200 - - - -
+2022-04-21 06:47:49,079 9060 INFO mydb odoo.addons.base.models.ir_cron: Starting job `Base: Auto-vacuum internal data`. 
+2022-04-21 06:47:49,335 9060 INFO mydb odoo.addons.base.models.ir_attachment: filestore gc 15 checked, 0 removed 
+2022-04-21 06:47:49,374 9060 INFO mydb odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2022-04-21 06:47:49,408 9060 INFO mydb odoo.addons.base.models.ir_cron: Job `Base: Auto-vacuum internal data` done. 
+2022-04-21 06:48:03,852 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 06:48:03] "GET /web/static/fonts/google/Roboto/Roboto-Regular.ttf HTTP/1.1" 200 - - - -
+2022-04-21 07:00:58,211 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:00:58] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.024 0.060
+2022-04-21 07:00:58,392 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:00:58] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 2 0.006 0.010
+2022-04-21 07:00:59,822 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:00:59] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.007 0.045
+2022-04-21 07:01:01,323 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:01:01] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.008 0.015
+2022-04-21 07:38:42,962 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:38:42] "POST /web/session/account HTTP/1.1" 200 - 2 0.013 0.029
+2022-04-21 07:39:06,723 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:39:06] "POST /web/action/load HTTP/1.1" 200 - 14 0.025 0.027
+2022-04-21 07:39:06,809 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:39:06] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 23 0.021 0.039
+2022-04-21 07:39:07,186 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:39:07] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.032 0.018
+2022-04-21 07:39:07,412 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:39:07] "POST /web/dataset/search_read HTTP/1.1" 200 - 3 0.011 0.014
+2022-04-21 07:39:21,116 9060 INFO mydb odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Website'] to user astronickypower@gmail.com #2 via 127.0.0.1 
+2022-04-21 07:39:21,117 9060 INFO mydb odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2022-04-21 07:39:21,119 9060 INFO mydb odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Website'] to user astronickypower@gmail.com #2 via 127.0.0.1 
+2022-04-21 07:39:21,803 9060 INFO mydb odoo.modules.loading: loading 1 modules... 
+2022-04-21 07:39:21,815 9060 INFO mydb odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2022-04-21 07:39:21,844 9060 INFO mydb odoo.modules.loading: updating modules list 
+2022-04-21 07:39:21,845 9060 INFO mydb odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2022-04-21 07:39:24,449 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 07:39:24] "GET /web/static/img/spin.png HTTP/1.1" 200 - - - -
+2022-04-21 07:39:29,729 9060 INFO mydb odoo.modules.loading: loading 7 modules... 
+2022-04-21 07:39:29,736 9060 INFO mydb odoo.modules.loading: 7 modules loaded in 0.01s, 0 queries (+0 extra) 
+2022-04-21 07:39:29,749 9060 INFO mydb odoo.modules.loading: loading 32 modules... 
+2022-04-21 07:39:29,749 9060 INFO mydb odoo.modules.loading: Loading module social_media (2/32) 
+2022-04-21 07:39:29,853 9060 INFO mydb odoo.modules.registry: module social_media: creating or updating database tables 
+2022-04-21 07:39:29,932 9060 INFO mydb odoo.modules.loading: loading social_media/views/res_company_views.xml 
+2022-04-21 07:39:30,281 9060 INFO mydb odoo.modules.loading: Module social_media loaded in 0.53s, 71 queries 
+2022-04-21 07:39:30,281 9060 INFO mydb odoo.modules.loading: Loading module base_setup (6/32) 
+2022-04-21 07:39:30,669 9060 INFO mydb odoo.modules.registry: module base_setup: creating or updating database tables 
+2022-04-21 07:39:30,734 9060 INFO mydb odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2022-04-21 07:39:30,742 9060 INFO mydb odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2022-04-21 07:39:30,870 9060 INFO mydb odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2022-04-21 07:39:30,923 9060 INFO mydb odoo.modules.loading: Module base_setup loaded in 0.64s, 169 queries 
+2022-04-21 07:39:30,923 9060 INFO mydb odoo.modules.loading: Loading module bus (7/32) 
+2022-04-21 07:39:30,966 9060 INFO mydb odoo.modules.registry: module bus: creating or updating database tables 
+2022-04-21 07:39:31,255 9060 INFO mydb odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2022-04-21 07:39:31,306 9060 INFO mydb odoo.modules.loading: Module bus loaded in 0.38s, 106 queries 
+2022-04-21 07:39:31,306 9060 INFO mydb odoo.modules.loading: Loading module http_routing (8/32) 
+2022-04-21 07:39:31,351 9060 INFO mydb odoo.modules.registry: module http_routing: creating or updating database tables 
+2022-04-21 07:39:31,372 9060 INFO mydb odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2022-04-21 07:39:31,513 9060 INFO mydb odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2022-04-21 07:39:31,592 9060 INFO mydb odoo.modules.loading: Module http_routing loaded in 0.29s, 104 queries 
+2022-04-21 07:39:31,593 9060 INFO mydb odoo.modules.loading: Loading module resource (9/32) 
+2022-04-21 07:39:31,937 9060 INFO mydb odoo.modules.registry: module resource: creating or updating database tables 
+2022-04-21 07:39:32,984 9060 INFO mydb odoo.modules.loading: loading resource/data/resource_data.xml 
+2022-04-21 07:39:33,103 9060 INFO mydb odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2022-04-21 07:39:33,130 9060 INFO mydb odoo.modules.loading: loading resource/security/resource_security.xml 
+2022-04-21 07:39:33,160 9060 INFO mydb odoo.modules.loading: loading resource/views/resource_views.xml 
+2022-04-21 07:39:33,308 9060 INFO mydb odoo.modules.loading: Module resource loaded in 1.71s, 521 queries 
+2022-04-21 07:39:33,308 9060 INFO mydb odoo.modules.loading: Loading module utm (10/32) 
+2022-04-21 07:39:33,444 9060 INFO mydb odoo.modules.registry: module utm: creating or updating database tables 
+2022-04-21 07:39:34,075 9060 INFO mydb odoo.modules.loading: loading utm/data/utm_data.xml 
+2022-04-21 07:39:34,167 9060 INFO mydb odoo.modules.loading: loading utm/views/utm_campaign_views.xml 
+2022-04-21 07:39:34,264 9060 INFO mydb odoo.modules.loading: loading utm/views/utm_views.xml 
+2022-04-21 07:39:34,322 9060 INFO mydb odoo.modules.loading: loading utm/security/ir.model.access.csv 
+2022-04-21 07:39:34,417 9060 INFO mydb odoo.modules.loading: Module utm loaded in 1.11s, 384 queries 
+2022-04-21 07:39:34,417 9060 INFO mydb odoo.modules.loading: Loading module google_recaptcha (14/32) 
+2022-04-21 07:39:34,538 9060 INFO mydb odoo.modules.registry: module google_recaptcha: creating or updating database tables 
+2022-04-21 07:39:34,777 9060 INFO mydb odoo.modules.loading: loading google_recaptcha/views/res_config_settings_view.xml 
+2022-04-21 07:39:34,856 9060 INFO mydb odoo.modules.loading: Module google_recaptcha loaded in 0.44s, 71 queries 
+2022-04-21 07:39:34,856 9060 INFO mydb odoo.modules.loading: Loading module iap (15/32) 
+2022-04-21 07:39:34,957 9060 INFO mydb odoo.modules.registry: module iap: creating or updating database tables 
+2022-04-21 07:39:35,136 9060 INFO mydb odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2022-04-21 07:39:35,146 9060 INFO mydb odoo.modules.loading: loading iap/security/ir_rule.xml 
+2022-04-21 07:39:35,159 9060 INFO mydb odoo.modules.loading: loading iap/views/iap_views.xml 
+2022-04-21 07:39:35,194 9060 INFO mydb odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2022-04-21 07:39:35,271 9060 INFO mydb odoo.modules.loading: Module iap loaded in 0.41s, 157 queries 
+2022-04-21 07:39:35,271 9060 INFO mydb odoo.modules.loading: Loading module mail (16/32) 
+2022-04-21 07:39:36,873 9060 INFO mydb odoo.modules.registry: module mail: creating or updating database tables 
+2022-04-21 07:39:42,890 9060 INFO mydb odoo.models: Storing computed values of res.partner.email_normalized 
+2022-04-21 07:39:46,794 9060 INFO mydb odoo.modules.loading: loading mail/data/mail_groups.xml 
+2022-04-21 07:39:47,102 9060 INFO mydb odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2022-04-21 07:39:47,149 9060 INFO mydb odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2022-04-21 07:39:47,236 9060 INFO mydb odoo.modules.loading: loading mail/wizard/mail_resend_cancel_views.xml 
+2022-04-21 07:39:47,253 9060 INFO mydb odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2022-04-21 07:39:47,319 9060 INFO mydb odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2022-04-21 07:39:47,429 9060 INFO mydb odoo.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2022-04-21 07:39:47,472 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2022-04-21 07:39:47,530 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_tracking_views.xml 
+2022-04-21 07:39:47,562 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2022-04-21 07:39:47,584 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2022-04-21 07:39:47,675 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2022-04-21 07:39:47,783 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2022-04-21 07:39:47,822 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2022-04-21 07:39:47,840 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_channel_partner_views.xml 
+2022-04-21 07:39:47,868 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_channel_rtc_session_views.xml 
+2022-04-21 07:39:47,890 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_channel_views.xml 
+2022-04-21 07:39:47,965 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2022-04-21 07:39:47,982 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2022-04-21 07:39:48,055 9060 INFO mydb odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2022-04-21 07:39:48,091 9060 INFO mydb odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2022-04-21 07:39:48,137 9060 INFO mydb odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2022-04-21 07:39:48,185 9060 INFO mydb odoo.modules.loading: loading mail/data/mail_templates.xml 
+2022-04-21 07:39:48,241 9060 INFO mydb odoo.modules.loading: loading mail/data/mail_channel_data.xml 
+2022-04-21 07:39:48,301 9060 INFO mydb odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2022-04-21 07:39:48,351 9060 INFO mydb odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2022-04-21 07:39:48,663 9060 INFO mydb odoo.modules.loading: loading mail/security/mail_security.xml 
+2022-04-21 07:39:48,796 9060 INFO mydb odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2022-04-21 07:39:48,910 9060 INFO mydb odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2022-04-21 07:39:48,950 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2022-04-21 07:39:49,008 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2022-04-21 07:39:49,033 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2022-04-21 07:39:49,048 9060 INFO mydb odoo.modules.loading: loading mail/views/res_users_views.xml 
+2022-04-21 07:39:49,087 9060 INFO mydb odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2022-04-21 07:39:49,114 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2022-04-21 07:39:49,149 9060 INFO mydb odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2022-04-21 07:39:49,176 9060 INFO mydb odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2022-04-21 07:39:49,202 9060 INFO mydb odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2022-04-21 07:39:49,290 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2022-04-21 07:39:49,313 9060 INFO mydb odoo.modules.loading: loading mail/views/mail_menus.xml 
+2022-04-21 07:39:49,524 9060 INFO mydb odoo.modules.loading: Module mail loaded in 14.25s, 3280 queries 
+2022-04-21 07:39:49,524 9060 INFO mydb odoo.modules.loading: Loading module web_unsplash (17/32) 
+2022-04-21 07:39:49,901 9060 INFO mydb odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2022-04-21 07:39:50,070 9060 INFO mydb odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2022-04-21 07:39:50,200 9060 INFO mydb odoo.modules.loading: Module web_unsplash loaded in 0.68s, 88 queries 
+2022-04-21 07:39:50,200 9060 INFO mydb odoo.modules.loading: Loading module auth_signup (18/32) 
+2022-04-21 07:39:50,526 9060 INFO mydb odoo.modules.registry: module auth_signup: creating or updating database tables 
+2022-04-21 07:39:50,633 9060 INFO mydb odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2022-04-21 07:39:50,645 9060 INFO mydb odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2022-04-21 07:39:50,654 9060 INFO mydb odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2022-04-21 07:39:50,681 9060 INFO mydb odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2022-04-21 07:39:50,725 9060 INFO mydb odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2022-04-21 07:39:50,756 9060 INFO mydb odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2022-04-21 07:39:50,895 9060 INFO mydb odoo.modules.loading: Module auth_signup loaded in 0.70s, 191 queries 
+2022-04-21 07:39:50,895 9060 INFO mydb odoo.modules.loading: Loading module auth_totp_mail (19/32) 
+2022-04-21 07:39:51,085 9060 INFO mydb odoo.modules.registry: module auth_totp_mail: creating or updating database tables 
+2022-04-21 07:39:51,117 9060 INFO mydb odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2022-04-21 07:39:51,589 9060 INFO mydb odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2022-04-21 07:39:51,599 9060 INFO mydb odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2022-04-21 07:39:51,643 9060 INFO mydb odoo.modules.loading: Module auth_totp_mail loaded in 0.75s, 92 queries 
+2022-04-21 07:39:51,644 9060 INFO mydb odoo.modules.loading: Loading module fetchmail (20/32) 
+2022-04-21 07:39:51,910 9060 INFO mydb odoo.modules.registry: module fetchmail: creating or updating database tables 
+2022-04-21 07:39:52,286 9060 INFO mydb odoo.modules.loading: loading fetchmail/data/fetchmail_data.xml 
+2022-04-21 07:39:52,359 9060 INFO mydb odoo.modules.loading: loading fetchmail/security/ir.model.access.csv 
+2022-04-21 07:39:52,393 9060 INFO mydb odoo.modules.loading: loading fetchmail/views/fetchmail_views.xml 
+2022-04-21 07:39:52,583 9060 INFO mydb odoo.modules.loading: loading fetchmail/views/mail_mail_views.xml 
+2022-04-21 07:39:52,642 9060 INFO mydb odoo.modules.loading: loading fetchmail/views/res_config_settings_views.xml 
+2022-04-21 07:39:52,796 9060 INFO mydb odoo.modules.loading: Module fetchmail loaded in 1.15s, 189 queries 
+2022-04-21 07:39:52,796 9060 INFO mydb odoo.modules.loading: Loading module iap_mail (21/32) 
+2022-04-21 07:39:52,881 9060 INFO mydb odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2022-04-21 07:39:52,965 9060 INFO mydb odoo.modules.loading: Module iap_mail loaded in 0.17s, 28 queries 
+2022-04-21 07:39:52,965 9060 INFO mydb odoo.modules.loading: Loading module mail_bot (22/32) 
+2022-04-21 07:39:53,153 9060 INFO mydb odoo.modules.registry: module mail_bot: creating or updating database tables 
+2022-04-21 07:39:53,309 9060 INFO mydb odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2022-04-21 07:39:53,335 9060 INFO mydb odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2022-04-21 07:39:53,397 9060 INFO mydb odoo.modules.loading: Module mail_bot loaded in 0.43s, 134 queries 
+2022-04-21 07:39:53,397 9060 INFO mydb odoo.modules.loading: Loading module phone_validation (23/32) 
+2022-04-21 07:39:53,569 9060 INFO mydb odoo.modules.registry: module phone_validation: creating or updating database tables 
+2022-04-21 07:39:54,252 9060 INFO mydb odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2022-04-21 07:39:54,263 9060 INFO mydb odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2022-04-21 07:39:54,295 9060 INFO mydb odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2022-04-21 07:39:54,403 9060 INFO mydb odoo.modules.loading: Module phone_validation loaded in 1.01s, 179 queries 
+2022-04-21 07:39:54,403 9060 INFO mydb odoo.modules.loading: Loading module partner_autocomplete (24/32) 
+2022-04-21 07:39:54,569 9060 INFO mydb odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2022-04-21 07:39:54,795 9060 INFO mydb odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2022-04-21 07:39:54,835 9060 INFO mydb odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2022-04-21 07:39:54,876 9060 INFO mydb odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2022-04-21 07:39:54,951 9060 INFO mydb odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2022-04-21 07:39:54,972 9060 INFO mydb odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2022-04-21 07:39:55,054 9060 INFO mydb odoo.modules.loading: Module partner_autocomplete loaded in 0.65s, 188 queries 
+2022-04-21 07:39:55,054 9060 INFO mydb odoo.modules.loading: Loading module portal (25/32) 
+2022-04-21 07:39:55,419 9060 INFO mydb odoo.modules.registry: module portal: creating or updating database tables 
+2022-04-21 07:39:56,208 9060 INFO mydb odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2022-04-21 07:39:56,218 9060 INFO mydb odoo.modules.loading: loading portal/data/mail_template_data.xml 
+2022-04-21 07:39:56,228 9060 INFO mydb odoo.modules.loading: loading portal/data/mail_templates.xml 
+2022-04-21 07:39:56,235 9060 INFO mydb odoo.modules.loading: loading portal/views/portal_templates.xml 
+2022-04-21 07:39:56,345 9060 INFO mydb odoo.modules.loading: loading portal/views/res_config_settings_views.xml 
+2022-04-21 07:39:56,398 9060 INFO mydb odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2022-04-21 07:39:56,440 9060 INFO mydb odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2022-04-21 07:39:56,580 9060 INFO mydb odoo.modules.loading: Module portal loaded in 1.53s, 427 queries 
+2022-04-21 07:39:56,580 9060 INFO mydb odoo.modules.loading: Loading module sms (26/32) 
+2022-04-21 07:39:56,973 9060 INFO mydb odoo.modules.registry: module sms: creating or updating database tables 
+2022-04-21 07:39:58,097 9060 INFO mydb odoo.models: Storing computed values of res.partner.phone_sanitized 
+2022-04-21 07:39:58,661 9060 INFO mydb odoo.addons.phone_validation.tools.phone_validation: The `phonenumbers` Python module is not installed, contact numbers will not be verified. Please install the `phonenumbers` Python module. 
+2022-04-21 07:39:58,713 9060 INFO mydb odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2022-04-21 07:39:58,769 9060 INFO mydb odoo.modules.loading: loading sms/wizard/sms_cancel_views.xml 
+2022-04-21 07:39:58,816 9060 INFO mydb odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2022-04-21 07:39:58,839 9060 INFO mydb odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2022-04-21 07:39:58,858 9060 INFO mydb odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2022-04-21 07:39:58,886 9060 INFO mydb odoo.modules.loading: loading sms/views/ir_actions_views.xml 
+2022-04-21 07:39:58,929 9060 INFO mydb odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2022-04-21 07:39:59,000 9060 INFO mydb odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2022-04-21 07:39:59,029 9060 INFO mydb odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2022-04-21 07:39:59,111 9060 INFO mydb odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2022-04-21 07:39:59,144 9060 INFO mydb odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2022-04-21 07:39:59,281 9060 INFO mydb odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2022-04-21 07:39:59,402 9060 INFO mydb odoo.modules.loading: loading sms/security/sms_security.xml 
+2022-04-21 07:39:59,495 9060 INFO mydb odoo.modules.loading: Module sms loaded in 2.92s, 592 queries 
+2022-04-21 07:39:59,495 9060 INFO mydb odoo.modules.loading: Loading module snailmail (27/32) 
+2022-04-21 07:39:59,760 9060 INFO mydb odoo.modules.registry: module snailmail: creating or updating database tables 
+2022-04-21 07:40:00,324 9060 INFO mydb odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2022-04-21 07:40:00,334 9060 INFO mydb odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2022-04-21 07:40:00,349 9060 INFO mydb odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2022-04-21 07:40:00,380 9060 INFO mydb odoo.modules.loading: loading snailmail/wizard/snailmail_confirm_views.xml 
+2022-04-21 07:40:00,409 9060 INFO mydb odoo.modules.loading: loading snailmail/wizard/snailmail_letter_cancel_views.xml 
+2022-04-21 07:40:00,430 9060 INFO mydb odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2022-04-21 07:40:00,452 9060 INFO mydb odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2022-04-21 07:40:00,464 9060 INFO mydb odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2022-04-21 07:40:00,512 9060 INFO mydb odoo.modules.loading: Module snailmail loaded in 1.02s, 376 queries 
+2022-04-21 07:40:00,512 9060 INFO mydb odoo.modules.loading: Loading module auth_totp_portal (28/32) 
+2022-04-21 07:40:00,636 9060 INFO mydb odoo.modules.registry: module auth_totp_portal: creating or updating database tables 
+2022-04-21 07:40:00,661 9060 INFO mydb odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2022-04-21 07:40:00,694 9060 INFO mydb odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2022-04-21 07:40:00,806 9060 INFO mydb odoo.modules.loading: Module auth_totp_portal loaded in 0.29s, 75 queries 
+2022-04-21 07:40:00,807 9060 INFO mydb odoo.modules.loading: Loading module digest (29/32) 
+2022-04-21 07:40:01,293 9060 INFO mydb odoo.modules.registry: module digest: creating or updating database tables 
+2022-04-21 07:40:01,807 9060 INFO mydb odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2022-04-21 07:40:01,818 9060 INFO mydb odoo.modules.loading: loading digest/data/digest_data.xml 
+2022-04-21 07:40:01,843 9060 INFO mydb odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2022-04-21 07:40:01,864 9060 INFO mydb odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2022-04-21 07:40:01,873 9060 INFO mydb odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2022-04-21 07:40:01,879 9060 INFO mydb odoo.modules.loading: loading digest/views/digest_views.xml 
+2022-04-21 07:40:01,958 9060 INFO mydb odoo.modules.loading: loading digest/views/digest_templates.xml 
+2022-04-21 07:40:01,963 9060 INFO mydb odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2022-04-21 07:40:02,068 9060 INFO mydb odoo.modules.loading: Module digest loaded in 1.26s, 308 queries 
+2022-04-21 07:40:02,068 9060 INFO mydb odoo.modules.loading: Loading module website (30/32) 
+2022-04-21 07:40:02,495 9060 INFO mydb odoo.modules.registry: module website: creating or updating database tables 
+2022-04-21 07:40:05,319 9060 INFO mydb odoo.models: Storing computed values of res.company.website_id 
+2022-04-21 07:40:06,311 9060 INFO mydb odoo.schema: Keep unexpected index mail_message_subtype_id_index on table mail_message_subtype 
+2022-04-21 07:40:06,727 9060 INFO mydb odoo.modules.loading: loading website/security/website_security.xml 
+2022-04-21 07:40:06,871 9060 INFO mydb odoo.modules.loading: loading website/security/ir.model.access.csv 
+2022-04-21 07:40:06,944 9060 INFO mydb odoo.modules.loading: loading website/data/ir_asset.xml 
+2022-04-21 07:40:06,954 9060 INFO mydb odoo.modules.loading: loading website/data/ir_cron_data.xml 
+2022-04-21 07:40:06,962 9060 INFO mydb odoo.modules.loading: loading website/data/mail_mail_data.xml 
+2022-04-21 07:40:06,972 9060 INFO mydb odoo.modules.loading: loading website/data/website_data.xml 
+2022-04-21 07:40:07,548 9060 INFO mydb odoo.modules.loading: loading website/data/website_visitor_cron.xml 
+2022-04-21 07:40:07,555 9060 INFO mydb odoo.modules.loading: loading website/data/digest_data.xml 
+2022-04-21 07:40:07,568 9060 INFO mydb odoo.modules.loading: loading website/views/assets.xml 
+2022-04-21 07:40:07,575 9060 INFO mydb odoo.modules.loading: loading website/views/website_templates.xml 
+2022-04-21 07:40:08,500 9060 INFO mydb odoo.modules.loading: loading website/views/website_navbar_templates.xml 
+2022-04-21 07:40:08,610 9060 INFO mydb odoo.modules.loading: loading website/views/website_configurator_templates.xml 
+2022-04-21 07:40:08,623 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/snippets.xml 
+2022-04-21 07:40:08,744 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_title.xml 
+2022-04-21 07:40:08,758 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_cover.xml 
+2022-04-21 07:40:08,813 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_text_image.xml 
+2022-04-21 07:40:08,859 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_image_text.xml 
+2022-04-21 07:40:08,865 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_banner.xml 
+2022-04-21 07:40:08,912 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_text_block.xml 
+2022-04-21 07:40:08,969 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_features.xml 
+2022-04-21 07:40:09,008 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_three_columns.xml 
+2022-04-21 07:40:09,025 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_picture.xml 
+2022-04-21 07:40:09,057 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_carousel.xml 
+2022-04-21 07:40:09,070 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_alert.xml 
+2022-04-21 07:40:09,088 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_card.xml 
+2022-04-21 07:40:09,096 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_share.xml 
+2022-04-21 07:40:09,150 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_rating.xml 
+2022-04-21 07:40:09,169 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_hr.xml 
+2022-04-21 07:40:09,184 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_facebook_page.xml 
+2022-04-21 07:40:09,225 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_image_gallery.xml 
+2022-04-21 07:40:09,250 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_countdown.xml 
+2022-04-21 07:40:09,266 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_product_catalog.xml 
+2022-04-21 07:40:09,291 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_comparisons.xml 
+2022-04-21 07:40:09,299 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_company_team.xml 
+2022-04-21 07:40:09,307 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_call_to_action.xml 
+2022-04-21 07:40:09,313 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_references.xml 
+2022-04-21 07:40:09,363 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_popup.xml 
+2022-04-21 07:40:09,387 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_faq_collapse.xml 
+2022-04-21 07:40:09,407 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_features_grid.xml 
+2022-04-21 07:40:09,415 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_tabs.xml 
+2022-04-21 07:40:09,454 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_table_of_content.xml 
+2022-04-21 07:40:09,501 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_chart.xml 
+2022-04-21 07:40:09,518 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_parallax.xml 
+2022-04-21 07:40:09,524 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_quotes_carousel.xml 
+2022-04-21 07:40:09,557 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_numbers.xml 
+2022-04-21 07:40:09,612 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_masonry_block.xml 
+2022-04-21 07:40:09,691 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_media_list.xml 
+2022-04-21 07:40:09,712 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_showcase.xml 
+2022-04-21 07:40:09,760 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_timeline.xml 
+2022-04-21 07:40:09,810 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_process_steps.xml 
+2022-04-21 07:40:09,818 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_text_highlight.xml 
+2022-04-21 07:40:09,834 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_progress_bar.xml 
+2022-04-21 07:40:09,852 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_blockquote.xml 
+2022-04-21 07:40:09,870 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_badge.xml 
+2022-04-21 07:40:09,914 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_color_blocks_2.xml 
+2022-04-21 07:40:09,923 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_product_list.xml 
+2022-04-21 07:40:09,936 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_mega_menu_multi_menus.xml 
+2022-04-21 07:40:09,966 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_mega_menu_menu_image_menu.xml 
+2022-04-21 07:40:10,012 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_mega_menu_thumbnails.xml 
+2022-04-21 07:40:10,056 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_mega_menu_little_icons.xml 
+2022-04-21 07:40:10,067 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_mega_menu_images_subtitles.xml 
+2022-04-21 07:40:10,083 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_mega_menu_menus_logos.xml 
+2022-04-21 07:40:10,104 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_mega_menu_odoo_menu.xml 
+2022-04-21 07:40:10,113 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_mega_menu_big_icons_subtitles.xml 
+2022-04-21 07:40:10,124 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_mega_menu_cards.xml 
+2022-04-21 07:40:10,137 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_google_map.xml 
+2022-04-21 07:40:10,159 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_map.xml 
+2022-04-21 07:40:10,207 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_dynamic_snippet.xml 
+2022-04-21 07:40:10,245 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_dynamic_snippet_carousel.xml 
+2022-04-21 07:40:10,272 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_embed_code.xml 
+2022-04-21 07:40:10,293 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_website_form.xml 
+2022-04-21 07:40:10,459 9060 INFO mydb odoo.modules.loading: loading website/views/snippets/s_searchbar.xml 
+2022-04-21 07:40:10,493 9060 INFO mydb odoo.modules.loading: loading website/views/website_views.xml 
+2022-04-21 07:40:10,683 9060 INFO mydb odoo.modules.loading: loading website/views/website_visitor_views.xml 
+2022-04-21 07:40:10,792 9060 INFO mydb odoo.modules.loading: loading website/views/res_config_settings_views.xml 
+2022-04-21 07:40:10,908 9060 INFO mydb odoo.modules.loading: loading website/views/website_rewrite.xml 
+2022-04-21 07:40:10,966 9060 INFO mydb odoo.modules.loading: loading website/views/ir_actions_views.xml 
+2022-04-21 07:40:11,036 9060 INFO mydb odoo.modules.loading: loading website/views/ir_asset_views.xml 
+2022-04-21 07:40:11,048 9060 INFO mydb odoo.modules.loading: loading website/views/ir_attachment_views.xml 
+2022-04-21 07:40:11,079 9060 INFO mydb odoo.modules.loading: loading website/views/ir_model_views.xml 
+2022-04-21 07:40:11,107 9060 INFO mydb odoo.modules.loading: loading website/views/res_partner_views.xml 
+2022-04-21 07:40:11,123 9060 INFO mydb odoo.modules.loading: loading website/wizard/base_language_install_views.xml 
+2022-04-21 07:40:11,133 9060 INFO mydb odoo.modules.loading: loading website/wizard/website_robots.xml 
+2022-04-21 07:40:11,351 9060 INFO mydb odoo.modules.loading: Module website loaded in 9.28s, 5440 queries 
+2022-04-21 07:40:11,351 9060 INFO mydb odoo.modules.loading: Loading module website_mail (31/32) 
+2022-04-21 07:40:11,587 9060 INFO mydb odoo.modules.registry: module website_mail: creating or updating database tables 
+2022-04-21 07:40:11,599 9060 INFO mydb odoo.modules.loading: loading website_mail/views/website_mail_templates.xml 
+2022-04-21 07:40:11,937 9060 INFO mydb odoo.modules.loading: Module website_mail loaded in 0.59s, 37 queries 
+2022-04-21 07:40:11,938 9060 INFO mydb odoo.modules.loading: Loading module website_sms (32/32) 
+2022-04-21 07:40:12,249 9060 INFO mydb odoo.modules.registry: module website_sms: creating or updating database tables 
+2022-04-21 07:40:12,269 9060 INFO mydb odoo.modules.loading: loading website_sms/views/website_visitor_views.xml 
+2022-04-21 07:40:12,389 9060 INFO mydb odoo.modules.loading: Module website_sms loaded in 0.45s, 80 queries 
+2022-04-21 07:40:12,389 9060 INFO mydb odoo.modules.loading: 32 modules loaded in 42.64s, 13287 queries (+0 extra) 
+2022-04-21 07:40:12,797 9060 INFO mydb odoo.modules.loading: Modules loaded. 
+2022-04-21 07:40:12,801 9060 INFO mydb odoo.modules.registry: Registry loaded in 51.059s 
+2022-04-21 07:40:12,801 9060 INFO mydb odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2022-04-21 07:40:12,821 9060 INFO mydb odoo.addons.base.models.ir_module: next action is "Start Website Configurator" 
+2022-04-21 07:40:12,845 9060 INFO mydb odoo.modules.registry: Registry changed, signaling through the database 
+2022-04-21 07:40:12,847 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:12] "POST /web/dataset/call_button HTTP/1.1" 200 - 14896 25.263 26.473
+2022-04-21 07:40:13,185 9060 INFO mydb odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2022-04-21 07:40:22,825 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:22] "GET /website/configurator HTTP/1.1" 200 - 160 0.141 9.507
+2022-04-21 07:40:22,903 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:22] "GET /web/assets/191-ba23f0a/1/website.website_configurator_assets_scss.min.css HTTP/1.1" 200 - 2 0.003 0.022
+2022-04-21 07:40:22,905 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:22] "GET /web/assets/190-bb03655/1/web.assets_common.min.css HTTP/1.1" 200 - 2 0.006 0.022
+2022-04-21 07:40:23,209 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:23] "GET /web/assets/192-60bdbff/1/website.assets_editor.min.css HTTP/1.1" 200 - 2 0.004 0.022
+2022-04-21 07:40:24,445 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:24] "GET /web/assets/194-6f5c4f4/1/web.assets_frontend_minimal.min.js HTTP/1.1" 200 - 2 0.005 0.030
+2022-04-21 07:40:24,459 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:24] "GET /web/assets/193-ba4d7dd/1/web.assets_common_minimal.min.js HTTP/1.1" 200 - 2 0.008 0.045
+2022-04-21 07:40:24,677 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:24] "GET /web/image/website/1/favicon?unique=dc3495a HTTP/1.1" 200 - 4 0.005 0.017
+2022-04-21 07:40:25,017 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:25] "GET /web/assets/195-47f7f15/1/web.assets_common_lazy.min.js HTTP/1.1" 200 - 2 0.003 0.233
+2022-04-21 07:40:25,198 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:25] "GET /web/assets/196-4908ddc/1/web.assets_frontend_lazy.min.js HTTP/1.1" 200 - 2 0.001 0.093
+2022-04-21 07:40:25,592 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:25] "GET /website/translations/5227498d9df4b403b0244c75aac21e0c091e50ce HTTP/1.1" 200 - 4 0.020 0.016
+2022-04-21 07:40:25,603 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:25] "GET /web/assets/197-60bdbff/1/website.assets_editor.min.js HTTP/1.1" 200 - 2 0.002 0.041
+2022-04-21 07:40:25,842 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:25] "GET /web/assets/198-c55b456/1/website.website_configurator_assets_js.min.js HTTP/1.1" 200 - 2 0.002 0.018
+2022-04-21 07:40:25,965 9060 INFO mydb odoo.addons.iap.tools.iap_tools: iap jsonrpc https://website.api.odoo.com/api/website/1/configurator/industries 
+2022-04-21 07:40:26,253 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:26] "GET /web/webclient/qweb/1650526825856?bundle=web.assets_frontend HTTP/1.1" 200 - 16 0.017 0.069
+2022-04-21 07:40:26,289 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:26] "GET /website/static/src/xml/website.xml HTTP/1.1" 200 - - - -
+2022-04-21 07:40:28,520 9060 WARNING mydb py.warnings: E:\work\odoo\python\lib\site-packages\cryptography\hazmat\backends\openssl\x509.py:17: CryptographyDeprecationWarning: This version of cryptography contains a temporary pyOpenSSL fallback path. Upgrade pyOpenSSL now.
+  File "E:\work\odoo\python\lib\threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+  File "E:\work\odoo\python\lib\threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "E:\work\odoo\python\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "E:\work\odoo\python\lib\socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "E:\work\odoo\python\lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "E:\work\odoo\python\lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 329, in handle
+    rv = BaseHTTPRequestHandler.handle(self)
+  File "E:\work\odoo\python\lib\http\server.py", line 426, in handle
+    self.handle_one_request()
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 364, in handle_one_request
+    return self.run_wsgi()
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 306, in run_wsgi
+    execute(self.server.app)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\serving.py", line 294, in execute
+    application_iter = app(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\server.py", line 482, in app
+    return self.app(e, s)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 112, in application
+    return application_unproxied(environ, start_response)
+  File "E:\work\odoo\server\odoo\service\wsgi_server.py", line 87, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1314, in __call__
+    return self.dispatch(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1280, in __call__
+    return self.app(environ, start_wrapped)
+  File "E:\work\odoo\python\lib\site-packages\werkzeug\middleware\shared_data.py", line 220, in __call__
+    return self.app(environ, start_response)
+  File "E:\work\odoo\server\odoo\http.py", line 1508, in dispatch
+    result = ir_http._dispatch()
+  File "E:\work\odoo\server\odoo\addons\website\models\ir_http.py", line 198, in _dispatch
+    response = super(Http, cls)._dispatch()
+  File "E:\work\odoo\server\odoo\addons\auth_signup\models\ir_http.py", line 19, in _dispatch
+    return super(Http, cls)._dispatch()
+  File "E:\work\odoo\server\odoo\addons\utm\models\ir_http.py", line 29, in _dispatch
+    response = super(IrHttp, cls)._dispatch()
+  File "E:\work\odoo\server\odoo\addons\http_routing\models\ir_http.py", line 515, in _dispatch
+    result = super(IrHttp, cls)._dispatch()
+  File "E:\work\odoo\server\odoo\addons\web_editor\models\ir_http.py", line 21, in _dispatch
+    return super(IrHttp, cls)._dispatch()
+  File "E:\work\odoo\server\odoo\addons\base\models\ir_http.py", line 237, in _dispatch
+    result = request.dispatch()
+  File "E:\work\odoo\server\odoo\http.py", line 688, in dispatch
+    result = self._call_function(**self.params)
+  File "E:\work\odoo\server\odoo\http.py", line 360, in _call_function
+    return checked_call(self.db, *args, **kwargs)
+  File "E:\work\odoo\server\odoo\service\model.py", line 94, in wrapper
+    return f(dbname, *args, **kwargs)
+  File "E:\work\odoo\server\odoo\http.py", line 349, in checked_call
+    result = self.endpoint(*a, **kw)
+  File "E:\work\odoo\server\odoo\http.py", line 917, in __call__
+    return self.method(*args, **kw)
+  File "E:\work\odoo\server\odoo\http.py", line 536, in response_wrap
+    response = f(*args, **kw)
+  File "E:\work\odoo\server\odoo\addons\web\controllers\main.py", line 1348, in call_kw
+    return self._call_kw(model, method, args, kwargs)
+  File "E:\work\odoo\server\odoo\addons\web\controllers\main.py", line 1340, in _call_kw
+    return call_kw(request.env[model], method, args, kwargs)
+  File "E:\work\odoo\server\odoo\api.py", line 460, in call_kw
+    result = _call_kw_model(method, model, args, kwargs)
+  File "E:\work\odoo\server\odoo\api.py", line 433, in _call_kw_model
+    result = method(recs, *args, **kwargs)
+  File "E:\work\odoo\server\odoo\addons\website\models\website.py", line 337, in configurator_init
+    result = self._website_api_rpc('/api/website/1/configurator/industries', {'lang': self.get_current_website().default_lang_id.code})
+  File "E:\work\odoo\server\odoo\addons\website\models\website.py", line 297, in _website_api_rpc
+    return iap_tools.iap_jsonrpc(endpoint, params=params)
+  File "E:\work\odoo\server\odoo\addons\iap\tools\iap_tools.py", line 106, in iap_jsonrpc
+    req = requests.post(url, json=payload, timeout=timeout)
+  File "E:\work\odoo\python\lib\site-packages\requests\api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "E:\work\odoo\python\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\work\odoo\python\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\work\odoo\python\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\work\odoo\python\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "E:\work\odoo\python\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "E:\work\odoo\python\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "E:\work\odoo\python\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "E:\work\odoo\python\lib\site-packages\urllib3\connection.py", line 355, in connect
+    cert = self.sock.getpeercert()
+  File "E:\work\odoo\python\lib\site-packages\urllib3\contrib\pyopenssl.py", line 363, in getpeercert
+    'subjectAltName': get_subj_alt_name(x509)
+  File "E:\work\odoo\python\lib\site-packages\urllib3\contrib\pyopenssl.py", line 204, in get_subj_alt_name
+    cert = peer_cert.to_cryptography()
+  File "E:\work\odoo\python\lib\site-packages\OpenSSL\crypto.py", line 1110, in to_cryptography
+    return _Certificate(backend, self._x509)
+  File "E:\work\odoo\python\lib\site-packages\cryptography\hazmat\backends\openssl\x509.py", line 17, in _Certificate
+    utils.DeprecatedIn35,
+ 
+2022-04-21 07:40:29,932 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:29] "POST /web/dataset/call_kw/website/configurator_init HTTP/1.1" 200 - 16 0.011 4.006
+2022-04-21 07:40:30,293 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:30] "GET /website/static/src/xml/theme_preview.xml HTTP/1.1" 200 - - - -
+2022-04-21 07:40:30,744 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 07:40:30] "GET /website/static/src/components/configurator/configurator.xml HTTP/1.1" 200 - - - -
+2022-04-21 07:40:43,983 9060 INFO mydb odoo.addons.base.models.ir_cron: Starting job `Mail: Email Queue Manager`. 
+2022-04-21 07:40:43,997 9060 INFO mydb odoo.addons.base.models.ir_cron: Job `Mail: Email Queue Manager` done. 
+2022-04-21 07:40:44,006 9060 INFO mydb odoo.addons.base.models.ir_cron: Starting job `Notification: Delete Notifications older than 6 Month`. 
+2022-04-21 07:40:44,011 9060 INFO mydb odoo.addons.base.models.ir_cron: Job `Notification: Delete Notifications older than 6 Month` done. 
+2022-04-21 07:40:44,017 9060 INFO mydb odoo.addons.base.models.ir_cron: Starting job `Users: Notify About Unregistered Users`. 
+2022-04-21 07:40:44,025 9060 INFO mydb odoo.addons.base.models.ir_cron: Job `Users: Notify About Unregistered Users` done. 
+2022-04-21 07:40:44,032 9060 INFO mydb odoo.addons.base.models.ir_cron: Starting job `Partner Autocomplete : Sync with remote DB`. 
+2022-04-21 07:40:44,035 9060 INFO mydb odoo.addons.base.models.ir_cron: Job `Partner Autocomplete : Sync with remote DB` done. 
+2022-04-21 07:40:44,042 9060 INFO mydb odoo.addons.base.models.ir_cron: Starting job `SMS: SMS Queue Manager`. 
+2022-04-21 07:40:44,046 9060 INFO mydb odoo.addons.base.models.ir_cron: Job `SMS: SMS Queue Manager` done. 
+2022-04-21 07:40:44,052 9060 INFO mydb odoo.addons.base.models.ir_cron: Starting job `Snailmail: process letters queue`. 
+2022-04-21 07:40:44,057 9060 INFO mydb odoo.addons.base.models.ir_cron: Job `Snailmail: process letters queue` done. 
+2022-04-21 07:40:44,064 9060 INFO mydb odoo.addons.base.models.ir_cron: Starting job `Disable unused snippets assets`. 
+2022-04-21 07:40:45,277 9060 INFO mydb odoo.addons.base.models.ir_cron: Job `Disable unused snippets assets` done. 
+2022-04-21 07:40:45,316 9060 INFO mydb odoo.addons.base.models.ir_cron: Starting job `Website Visitor : Archive old visitors`. 
+2022-04-21 07:40:45,321 9060 INFO mydb odoo.addons.base.models.ir_cron: Job `Website Visitor : Archive old visitors` done. 
+2022-04-21 07:43:23,739 9060 INFO mydb werkzeug: 127.0.0.1 - - [21/Apr/2022 07:43:23] "POST /web/dataset/call_kw/web_tour.tour/get_consumed_tours HTTP/1.1" 200 - 9 0.022 0.010
+2022-04-21 07:43:23,750 9060 INFO ? werkzeug: 127.0.0.1 - - [21/Apr/2022 07:43:23] "GET /website/static/src/img/odoo_logo.svg HTTP/1.1" 200 - - - -
+2022-04-21 08:20:33,537 9060 INFO ? odoo.service.server: Initiating shutdown 
+2022-04-21 08:20:33,537 9060 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
